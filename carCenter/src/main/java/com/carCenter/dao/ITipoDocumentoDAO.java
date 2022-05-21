@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.carCenter.model.TipoDocumento;
 
-public interface ITipoDocumento {
+public interface ITipoDocumentoDAO {
 
 	/**
 	 * Metodo que consulta los tipos de documentos de la base de datos
