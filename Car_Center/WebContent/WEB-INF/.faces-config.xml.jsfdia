@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#registro.xhtml" PATH="/registro.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#registro.xhtml:0" NAME="item"
+   PATH="/registro.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml?faces-redirect=true"
+    NAME="output" PATH="/login.xhtml?faces-redirect=true"
+    TARGET="rules:#login.xhtml?faces-redirect=true" TITLE="login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="vehiculos::#vehiculos.xhtml?faces-redirect=true" NAME="output"
+    PATH="/vehiculos.xhtml?faces-redirect=true"
+    TARGET="rules:#vehiculos.xhtml?faces-redirect=true"
+    TITLE="vehiculos" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#vehiculos.xhtml" PATH="/vehiculos.xhtml"
+  SHAPE="448,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#vehiculos.xhtml:0" NAME="item"
+   PATH="/vehiculos.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="formularioVehiculos::#formularioVehiculos.xhtml?faces-redirect=true"
+    NAME="output" PATH="/formularioVehiculos.xhtml?faces-redirect=true"
+    TARGET="rules:#formularioVehiculos.xhtml?faces-redirect=true"
+    TITLE="formularioVehiculos" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#vehiculos.xhtml?faces-redirect=true"
+  PATH="/vehiculos.xhtml?faces-redirect=true" SHAPE="448,241,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#login.xhtml?faces-redirect=true"
+  PATH="/login.xhtml?faces-redirect=true" SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#formularioVehiculos.xhtml?faces-redirect=true"
+  PATH="/formularioVehiculos.xhtml?faces-redirect=true"
+  SHAPE="656,369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#formularioVehiculos.xhtml"
+  PATH="/formularioVehiculos.xhtml" SHAPE="240,257,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#formularioVehiculos.xhtml:0" NAME="item"
+   PATH="/formularioVehiculos.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="vehiculos::#vehiculos.xhtml?faces-redirect=true" NAME="output"
+    PATH="/vehiculos.xhtml?faces-redirect=true"
+    TARGET="rules:#vehiculos.xhtml?faces-redirect=true"
+    TITLE="vehiculos" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>
