@@ -13,6 +13,7 @@
 </h:head>
 
 <h:body style="background: #8EA8EB">
+<h:form id="form">
 	<nav class="navbar navbar-expand-lg" style="background-color: #b4b4b4;">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="#"><img src="resources/logo-car-center.png" style="width: 200px" /></a>
@@ -29,11 +30,15 @@
 	      <div class="navbar-nav">
 	        <a class="nav-link active" aria-current="page" href="#" style="font-size: 120%">Perfil</a>
 	      </div>
+	      <div class="navbar-nav">
+	        <h:commandButton action="#{clienteUI.cerrarSesion()}" value="Cerrar sesión" onclick="success()" />
+	      </div>
 	    </div>
 	  </div>
 	</nav>
-	<h:form if="form">
 		<div class="container">
+			<h2 style="text-align: center;">Listado de Vehículos</h2>
+			<p:separator style="height:10px" />
 			<h:panelGroup>
 				<h:panelGrid columns="1">
 					<p:commandButton value="Nuevo" action="#{vehiculos.nuevoVehiculo()}" update="@form" process="@this" />
@@ -59,7 +64,7 @@
 				</h:panelGrid>
 			</h:panelGroup>
 		</div>
-	</h:form>
+</h:form>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

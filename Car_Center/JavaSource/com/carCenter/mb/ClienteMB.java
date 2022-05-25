@@ -75,6 +75,7 @@ public class ClienteMB {
 	}
 	
 	public String iniciarSesion() {
+		HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
 		Cliente buscar = svc.buscarClientePorCorreo(actual.getCorreo());
 		String encript = DigestUtils.sha1Hex(contrasena);
 		
@@ -88,11 +89,16 @@ public class ClienteMB {
 			buscar = new Cliente();
 			return "";
 		} else {
-			HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
 			session.setAttribute("cliente", buscar);
 			PrimeFaces.current().executeScript("Swal.fire('Operacion exitosamente!', 'Se logro iniciar sesión!', 'success');");
+			return "/vehiculos.jsf";
 		}
-		return "/vehiculos.xhtml?faces-redirect=true";
+	}
+	
+	public String cerrarSesion() {
+		HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+		session.invalidate();
+		return "/login.jsf";
 	}
 
 	public Cliente getNuevo() {

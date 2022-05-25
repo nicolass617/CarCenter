@@ -14,5 +14,7 @@
 		<mapping class="com.carCenter.model.TipoDocumento" />
 		<mapping class="com.carCenter.model.Vehiculo" />
 		<mapping class="com.carCenter.model.Mantenimiento"/>
+		<mapping class="com.carCenter.model.Mecanico"/>
+		<mapping class="com.carCenter.model.Tienda"/>
 	</session-factory>
 </hibernate-configuration>
